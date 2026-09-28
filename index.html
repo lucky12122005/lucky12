@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucky Tiwari | Creative Portfolio</title>
+<meta name="description" content="Portfolio of Lucky Tiwari — Computer Applications graduate, creative learner and aspiring technology professional from Jaipur, Rajasthan.">
+<style>
+:root{
+  --bg:#070b17; --panel:#0e1425; --panel2:#121a30; --text:#f7f8fc;
+  --muted:#aeb7cb; --line:rgba(255,255,255,.10); --accent:#7c5cff;
+  --accent2:#00d9ff; --gold:#ffd166; --max:1120px;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:
+radial-gradient(circle at 10% 0%,rgba(124,92,255,.20),transparent 30%),
+radial-gradient(circle at 90% 10%,rgba(0,217,255,.14),transparent 28%),var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(92%,var(--max));margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,11,23,.72);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.navbar{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:.8px;font-size:1.15rem}
+.logo span{color:var(--accent2)}
+.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.94rem}
+.navlinks a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);font-weight:700;transition:.25s}
+.btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.25)}
+.btn.primary{background:linear-gradient(135deg,var(--accent),#4e9cff);border:0;box-shadow:0 12px 35px rgba(124,92,255,.25)}
+.hero{padding:105px 0 85px;display:grid;grid-template-columns:1.35fr .65fr;gap:55px;align-items:center}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:#d9e1f3;background:rgba(255,255,255,.04);font-size:.85rem}
+.dot{width:8px;height:8px;border-radius:50%;background:#35e49a;box-shadow:0 0 15px #35e49a}
+h1{font-size:clamp(3rem,7vw,5.8rem);line-height:.96;letter-spacing:-.055em;margin:22px 0}
+.gradient{background:linear-gradient(100deg,#fff 15%,#a992ff 55%,#55e7ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:1.16rem;color:var(--muted);max-width:680px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero-card{padding:28px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.025));box-shadow:0 30px 80px rgba(0,0,0,.28)}
+.avatar{width:128px;height:128px;border-radius:30px;display:grid;place-items:center;font-size:2.6rem;font-weight:900;background:linear-gradient(135deg,var(--accent),var(--accent2));margin-bottom:24px}
+.hero-card h3{margin:0 0 6px;font-size:1.35rem}
+.hero-card p{margin:0;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:25px}
+.stat{padding:15px;border-radius:15px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.stat b{display:block;font-size:1.15rem}.stat span{font-size:.78rem;color:var(--muted)}
+section{padding:82px 0}
+.section-kicker{color:var(--accent2);font-weight:800;text-transform:uppercase;letter-spacing:.15em;font-size:.78rem}
+h2{font-size:clamp(2rem,4vw,3.3rem);line-height:1.05;margin:10px 0 14px;letter-spacing:-.04em}
+.section-intro{color:var(--muted);max-width:700px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+.card{padding:25px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025))}
+.card:hover{border-color:rgba(124,92,255,.45);transform:translateY(-3px);transition:.25s}
+.icon{font-size:1.5rem;margin-bottom:14px}.card h3{margin:0 0 8px}.card p{color:var(--muted);margin:0}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.skill{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.045);border:1px solid var(--line);color:#dfe6f6}
+.timeline{margin-top:30px;border-left:1px solid var(--line);padding-left:24px;display:grid;gap:24px}
+.item{position:relative;padding:4px 0}.item:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--accent2);left:-30px;top:11px;box-shadow:0 0 18px rgba(0,217,255,.6)}
+.item small{color:var(--accent2);font-weight:800}.item h3{margin:5px 0}.item p{color:var(--muted);margin:0}
+.cta{margin-top:35px;padding:35px;border-radius:28px;border:1px solid rgba(124,92,255,.35);background:linear-gradient(135deg,rgba(124,92,255,.18),rgba(0,217,255,.08))}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.contact-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035)}
+.contact-card span{display:block;color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.1em}.contact-card a{display:block;margin-top:5px;font-weight:700;word-break:break-word}
+footer{padding:35px 0;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
+footer .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:800px){
+ .navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:70px}.grid,.contact-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr 1fr}
+}
+@media(max-width:480px){h1{font-size:3.2rem}.stats{grid-template-columns:1fr}.hero-card{padding:22px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container navbar">
+    <a class="logo" href="#top">LUCKY<span>.</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </div>
+    <a class="btn primary" href="mailto:luckytiwari12122005@gmail.com">Let's Talk</a>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero container">
+  <div>
+    <div class="badge"><span class="dot"></span> Open to opportunities</div>
+    <h1>Hi, I'm <span class="gradient">Lucky Tiwari.</span><br>Creative. Curious. Tech-minded.</h1>
+    <p class="lead">A Computer Applications graduate from Jaipur who enjoys learning new technology, building digital skills and turning ideas into clean, useful experiences.</p>
+    <div class="actions">
+      <a class="btn primary" href="#contact">Contact Me ↗</a>
+      <a class="btn" href="#about">Explore Portfolio ↓</a>
+    </div>
+  </div>
+  <aside class="hero-card">
+    <div class="avatar">LT</div>
+    <h3>Lucky Tiwari</h3>
+    <p>Computer Applications Graduate · Jaipur, Rajasthan</p>
+    <div class="stats">
+      <div class="stat"><b>BCA</b><span>Education</span></div>
+      <div class="stat"><b>6+</b><span>Core skills</span></div>
+      <div class="stat"><b>2</b><span>Languages</span></div>
+    </div>
+  </aside>
+</section>
+
+<section id="about">
+<div class="container">
+  <div class="section-kicker">01 · About</div>
+  <h2>A motivated learner with a creative edge.</h2>
+  <p class="section-intro">I'm focused on growing my professional skills while exploring technology, web design and digital creativity. I value clear communication, flexibility, time management and continuous learning.</p>
+  <div class="grid">
+    <div class="card"><div class="icon">⚡</div><h3>Fast Learner</h3><p>Comfortable picking up new tools, workflows and concepts quickly.</p></div>
+    <div class="card"><div class="icon">🎨</div><h3>Creative Mindset</h3><p>Interested in front-end web design, visual presentation and digital content.</p></div>
+    <div class="card"><div class="icon">🤝</div><h3>Good Communication</h3><p>Focused on clear, respectful communication and productive teamwork.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+  <div class="section-kicker">02 · Skills</div>
+  <h2>Tools & strengths</h2>
+  <p class="section-intro">A practical mix of professional, creative and personal skills.</p>
+  <div class="skills">
+    <span class="skill">MS Office</span><span class="skill">Front-End Web Design</span><span class="skill">Video Editing</span>
+    <span class="skill">Communication</span><span class="skill">Time Management</span><span class="skill">Flexibility</span>
+    <span class="skill">Fast Learning</span>
+  </div>
+</div>
+</section>
+
+<section id="education">
+<div class="container">
+  <div class="section-kicker">03 · Education</div>
+  <h2>My learning journey</h2>
+  <div class="timeline">
+    <div class="item"><small>03 / 2023</small><h3>Bachelor of Computer Applications</h3><p>S.S. Jain Subodh P.G. Mahila Mahavidyalaya, Jaipur, Rajasthan</p></div>
+    <div class="item"><small>Earlier Education</small><h3>High School Diploma</h3><p>Jaipur Cambridge School, Jaipur, Rajasthan</p></div>
+    <div class="item"><small>Achievement</small><h3>National Social Scheme (NSS)</h3><p>Participation / accomplishment listed in the provided résumé.</p></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="section-kicker">04 · What I Bring</div>
+  <h2>Ready to grow through real projects.</h2>
+  <div class="cta">
+    <p class="section-intro" style="margin:0">I'm interested in opportunities where I can apply my existing skills, learn from experienced people and contribute to meaningful digital work.</p>
+    <div class="actions">
+      <a class="btn primary" href="#contact">Start a Conversation ↗</a>
+      <a class="btn" href="mailto:luckytiwari12122005@gmail.com">Email Me</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="section-kicker">05 · Contact</div>
+  <h2>Let's connect.</h2>
+  <p class="section-intro">For opportunities, collaborations or professional conversations, reach out through the details below.</p>
+  <div class="contact-grid">
+    <div class="contact-card"><span>Email</span><a href="mailto:luckytiwari12122005@gmail.com">luckytiwari12122005@gmail.com</a></div>
+    <div class="contact-card"><span>Phone</span><a href="tel:+917849990926">+91 7849990926</a></div>
+    <div class="contact-card"><span>Location</span><a href="#">Jaipur, Rajasthan 302039</a></div>
+    <div class="contact-card"><span>LinkedIn</span><a href="https://www.linkedin.com/in/lucky-tiwari-77ab45331/" target="_blank" rel="noopener">linkedin.com/in/lucky-tiwari-77ab45331/ ↗</a></div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer><div class="container"><span>© 2026 Lucky Tiwari</span><span>Designed as a modern personal portfolio.</span></div></footer>
+</body>
+</html>
